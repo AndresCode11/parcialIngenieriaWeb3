@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Three.js 101</title>
+  <!--  Simple reset to delete the margins  -->
+  <style>
+    body { margin: 0; }
+    canvas { width: 100%; height: 100% }
+  </style>
+  <!--  Three.js CDN  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.min.js"></script>
+  <!-- Orbits-->
+  <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- -->
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+  <!--  Our code  -->
+  <div class="text-center">
+     <h1>Generador de Cuevas usando Cellular Automata</h1>
+     <h3>Pablo Andres Diaz Mora</h3>
+     <h3>Paula Sofia Martinez</h3>
+      <form>
+      <input class="btn btn-info" type='button' onClick='recreate(this.form)' value='Crear mundo nuevo'>
+      <input class="btn btn-info" type='button' onClick='iterate()' value='Dar siguiente paso'>
+      <br>
+        Limite Nacimiento: <input type="number" name="birthLimit" min="1" max="6" value="4">
+        Limite Muertes: <input type="number" name="deathLimit" min="1" max="6" value="3"><br>
+        Chance incial: <input type="number" name="initialChance" min="0" max="1" step="0.1" value="0.4">
+        Number de pasos: <input type="number" name="numSteps" min="0" max="6" value="2"></form><br><br>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
